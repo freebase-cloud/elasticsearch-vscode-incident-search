@@ -1,0 +1,34 @@
+[
+  {
+    "phase": "seed",
+    "query": "PUT /fbx_elasticsearch_000000000000000000000000/_doc/1\n{\"id\":1,\"message\":\"API unavailable\",\"severity\":5}"
+  },
+  {
+    "phase": "seed",
+    "query": "PUT /fbx_elasticsearch_000000000000000000000000/_doc/2\n{\"id\":2,\"message\":\"Cache miss\",\"severity\":1}"
+  },
+  {
+    "phase": "seed",
+    "query": "PUT /fbx_elasticsearch_000000000000000000000000/_doc/3\n{\"id\":3,\"message\":\"Worker retry\",\"severity\":4}"
+  },
+  {
+    "phase": "read",
+    "query": "GET /fbx_elasticsearch_000000000000000000000000/_search\n{\"size\":100,\"query\":{\"match_all\":{}}}"
+  },
+  {
+    "phase": "update",
+    "query": "POST /fbx_elasticsearch_000000000000000000000000/_update/1\n{\"doc\":{\"severity\":15}}"
+  },
+  {
+    "phase": "verify",
+    "query": "GET /fbx_elasticsearch_000000000000000000000000/_doc/1"
+  },
+  {
+    "phase": "delete",
+    "query": "DELETE /fbx_elasticsearch_000000000000000000000000/_doc/2"
+  },
+  {
+    "phase": "cleanup",
+    "query": "DELETE /fbx_elasticsearch_000000000000000000000000"
+  }
+]

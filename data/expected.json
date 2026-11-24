@@ -1,0 +1,13 @@
+{
+  "critical": [
+    {
+      "message": "API unavailable",
+      "severity": 5
+    },
+    {
+      "message": "Worker retry",
+      "severity": 4
+    }
+  ],
+  "lowPriority": 1
+}

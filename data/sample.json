@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "message": "API unavailable",
+    "severity": 5
+  },
+  {
+    "id": 2,
+    "message": "Cache miss",
+    "severity": 1
+  },
+  {
+    "id": 3,
+    "message": "Worker retry",
+    "severity": 4
+  }
+]

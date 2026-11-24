@@ -1,0 +1,7 @@
+{
+  "name": "elasticsearch-vscode-incident-search",
+  "engine": "elasticsearch",
+  "slug": "elasticsearch",
+  "kind": "application",
+  "useCase": "incident-search"
+}
